@@ -29,6 +29,7 @@ def getNotes(request):
 @api_view(['GET'])
 def getNote(request, pk):
     try:
+        # param = request.GET.get('id')
         notes = Note.objects.get(pk=pk)
         print("...............",notes)
     except Note.DoesNotExist:
