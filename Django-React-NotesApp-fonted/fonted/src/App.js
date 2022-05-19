@@ -1,8 +1,8 @@
 import logo from './logo.svg';
-import './App.css';
 import Header from './components/Header';
 import NoteListPage from './pages/NoteListPage';
 import ReactDOM from "react-dom/client";
+import './pages/NoteListPage.css'
 import {
   BrowserRouter,
   Routes,
@@ -18,15 +18,21 @@ function App() {
     //   <NoteListPage/>
 
     // </div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<NoteListPage />} />
-        <Route path="/note/:id" element={<NotePage />} />
 
-        {/* <Route path=":invoiceId" element={<Invoice />} />
+    <div className='container dark'>
+      <div className="app">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<NoteListPage />} />
+            <Route path="/note/:id" element={<NotePage />} />
+
+            {/* <Route path=":invoiceId" element={<Invoice />} />
         <Route path="sent" element={<SentInvoices />} /> */}
-      </Routes>
-    </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </div>
+
   );
 }
 
