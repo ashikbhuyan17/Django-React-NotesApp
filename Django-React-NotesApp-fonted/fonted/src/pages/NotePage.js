@@ -15,8 +15,8 @@ function NotePage() {
         setNotes(data)
     }
     return (
-        <div>
-            single note {note?.body}
+        <div className='note'>
+            <textarea defaultValue={note?.body}></textarea>
         </div>
     );
 }
